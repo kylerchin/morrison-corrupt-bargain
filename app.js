@@ -16,11 +16,11 @@ app.configure(function () {
 var auth = express.basicAuth(masterUser, masterPass);
 
 app.get('/', auth, function (req, res) {
-    res.sendfile(__dirname + '/views/index.html');
+    res.sendfile(__dirname + 'https://kylerschin.github.io/reveal.js/');
 });
 
 app.get('/client', function (req, res) {
-    res.sendfile(__dirname + '/views/client.html');
+    res.sendfile(__dirname + 'https://kylerschin.github.io/reveal.js/client');
 });
 
 var server = http.createServer(app).listen(port, function () {
